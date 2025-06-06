@@ -246,7 +246,7 @@ function install_tailscale_cert_renewal() {
 
 		[Timer]
 		OnCalendar=weekly
-		Unit=%i.service
+		Unit=tailscale-cert.service
 		Persistent=true
 
 		[Install]

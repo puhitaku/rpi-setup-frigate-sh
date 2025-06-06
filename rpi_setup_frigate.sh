@@ -203,9 +203,9 @@ function install_frigate() {
 
 		Environment=COMPOSE_FILE=${HOME}/docker-compose-%i.yml
 
-		ExecStartPre=-/usr/local/bin/docker-compose -f \${COMPOSE_FILE} down --volumes
-		ExecStart=/usr/local/bin/docker-compose -f \${COMPOSE_FILE} up
-		ExecStop=/usr/local/bin/docker-compose -f \${COMPOSE_FILE} down --volumes
+		ExecStartPre=-/usr/bin/docker compose -f \${COMPOSE_FILE} down --volumes
+		ExecStart=/usr/bin/docker compose -f \${COMPOSE_FILE} up
+		ExecStop=/usr/bin/docker compose -f \${COMPOSE_FILE} down --volumes
 
 		[Install]
 		WantedBy=multi-user.target

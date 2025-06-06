@@ -88,7 +88,7 @@ function install_frigate() {
 		    privileged: true # this may not be necessary for all setups
 		    restart: unless-stopped
 		    image: ghcr.io/blakeblackshear/frigate:stable
-		    shm_size: "64mb" # update for your cameras based on calculation in the doc
+		    shm_size: "128mb" # update for your cameras based on calculation in the doc
 		    devices:
 		      - /dev/bus/usb:/dev/bus/usb # Passes the USB Coral, needs to be modified for other versions
 		      # - /dev/apex_0:/dev/apex_0 # Passes a PCIe Coral, follow driver instructions here https://coral.ai/docs/m2/get-started/#2a-on-linux
